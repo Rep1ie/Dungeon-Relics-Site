@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <radialGradient id="lwBody" cx="40%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#6b4fa0"/><stop offset="100%" stop-color="#221436"/>
+    </radialGradient>
+    <radialGradient id="lwLure" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff3b0"/><stop offset="55%" stop-color="#e8c964"/><stop offset="100%" stop-color="#e8c964" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#100c09"/>
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#b68f40" stroke-opacity=".45"/>
+  <g stroke="#5a4780" stroke-opacity=".5" fill="none" stroke-width="1">
+    <path d="M6 10h20M6 10v20M10 6c10 2 16 8 18 18M14 6c8 4 12 10 13 18"/>
+  </g>
+  <g stroke="#3b2a5c" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M26 34c-6-2-9-7-13-8M26 39c-7 1-10 5-14 6M38 34c6-2 9-7 13-8M38 39c7 1 10 5 14 6"/>
+  </g>
+  <ellipse cx="32" cy="41" rx="12" ry="11" fill="url(#lwBody)"/>
+  <ellipse cx="32" cy="29" rx="7.5" ry="6" fill="#2c1c47"/>
+  <circle cx="28.5" cy="28" r="1.7" fill="#ffd166"/>
+  <circle cx="35.5" cy="28" r="1.7" fill="#ffd166"/>
+  <circle cx="31" cy="32" r="1.2" fill="#ffd166" opacity=".8"/>
+  <circle cx="36" cy="32" r="1.2" fill="#ffd166" opacity=".8"/>
+  <path d="M32 23c0-6 6-7 8-11" stroke="#6b4fa0" stroke-width="1.6" fill="none"/>
+  <circle cx="41" cy="11" r="7" fill="url(#lwLure)"/>
+  <circle cx="41" cy="11" r="3" fill="#fff3b0"/>
+  <ellipse cx="32" cy="44" rx="5" ry="6" fill="#4a3672" opacity=".6"/>
+</svg>

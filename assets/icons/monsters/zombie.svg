@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="zbSkin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fb573"/><stop offset="100%" stop-color="#4d6135"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#100c09"/>
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#b68f40" stroke-opacity=".45"/>
+  <path d="M32 12c10 0 16 7 16 17 0 6-1.5 10-3 13-1.6 3.2-4 6-13 6s-11.4-2.8-13-6c-1.5-3-3-7-3-13 0-10 6-17 16-17z" fill="url(#zbSkin)"/>
+  <path d="M18 24c4-3 9-4 14-4s10 1 14 4c-1-8-6.5-12-14-12s-13 4-14 12z" fill="#3b4a29"/>
+  <path d="M22 31l7 2-7 2z" fill="#101a0b"/>
+  <circle cx="25" cy="33" r="3.4" fill="#0e1508"/>
+  <circle cx="24" cy="32" r="1.3" fill="#d7ff7a"/>
+  <ellipse cx="40" cy="33" rx="4.6" ry="4.2" fill="#e9f0d2"/>
+  <circle cx="41" cy="33" r="2" fill="#101a0b"/>
+  <path d="M24 44h17" stroke="#101a0b" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M27 41v6M32 41v6M37 41v6" stroke="#101a0b" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
+  <path d="M44 20l4-3 3 4" stroke="#b68f40" stroke-width="1.6" fill="none" opacity=".5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="mgStone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8d4cc"/><stop offset="100%" stop-color="#7c776e"/>
+    </linearGradient>
+    <linearGradient id="mgWing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9a49b"/><stop offset="100%" stop-color="#514c45"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#100c09"/>
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#b68f40" stroke-opacity=".45"/>
+  <path d="M22 30C16 24 10 22 5 23c4 2 6 5 6 9 0 5 4 9 11 10z" fill="url(#mgWing)"/>
+  <path d="M42 30c6-6 12-8 17-7-4 2-6 5-6 9 0 5-4 9-11 10z" fill="url(#mgWing)"/>
+  <path d="M24 16l-3-8 8 5zM40 16l3-8-8 5z" fill="#6d6860"/>
+  <path d="M32 14c8 0 13 6 13 14 0 5-1.6 8-3.4 10.6L38 48c-.6 1.6-1.6 2.4-3 2.4h-6c-1.4 0-2.4-.8-3-2.4l-3.6-9.4C20.6 36 19 33 19 28c0-8 5-14 13-14z" fill="url(#mgStone)"/>
+  <path d="M22 27c2.6-2.4 6-2.4 8.6.4-2.8 2-6 1.8-8.6-.4z" fill="#2c2823"/>
+  <path d="M42 27c-2.6-2.4-6-2.4-8.6.4 2.8 2 6 1.8 8.6-.4z" fill="#2c2823"/>
+  <circle cx="26.4" cy="27.2" r="1.7" fill="#ffd166"/>
+  <circle cx="37.6" cy="27.2" r="1.7" fill="#ffd166"/>
+  <path d="M23 36c5 4 13 4 18 0-2 5-16 5-18 0z" fill="#2c2823"/>
+  <path d="M25.6 36.6l2.4 3.4 2-3.4zM36 36.6l-2.4 3.4-2-3.4z" fill="#efece5"/>
+  <path d="M28 21l-3 3M36 21l3 3" stroke="#5d584f" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="lcBone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2ead6"/><stop offset="100%" stop-color="#9d9179"/>
+    </linearGradient>
+    <linearGradient id="lcCrown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0d display"/><stop offset="0" stop-color="#f4d67f"/><stop offset="100%" stop-color="#9c7526"/>
+    </linearGradient>
+    <radialGradient id="lcEye" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d9fbff"/><stop offset="55%" stop-color="#39c6e8"/><stop offset="100%" stop-color="#39c6e8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#100c09"/>
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#b68f40" stroke-opacity=".45"/>
+  <path d="M32 20c9 0 15 6 15 15 0 6-2.6 10-6 12v5c0 1.4-1 2.4-2.4 2.4h-13C24.2 54.4 23 53.4 23 52v-5c-3.4-2-6-6-6-12 0-9 6-15 15-15z" fill="url(#lcBone)"/>
+  <circle cx="25.5" cy="33" r="5.6" fill="#141018"/>
+  <circle cx="38.5" cy="33" r="5.6" fill="#141018"/>
+  <circle cx="25.5" cy="33" r="4.4" fill="url(#lcEye)"/>
+  <circle cx="38.5" cy="33" r="4.4" fill="url(#lcEye)"/>
+  <path d="M32 37l2.6 5h-5.2z" fill="#141018"/>
+  <path d="M26 46h12v3H26z" fill="#141018"/>
+  <path d="M28.6 46v3M32 46v3M35.4 46v3" stroke="url(#lcBone)" stroke-width="1.4"/>
+  <path d="M16 20l3-9 5 6 8-9 8 9 5-6 3 9c-6-3-10-4-16-4s-10 1-16 4z" fill="url(#lcCrown)"/>
+  <circle cx="32" cy="14" r="2.2" fill="#39c6e8"/>
+  <circle cx="19.5" cy="13" r="1.5" fill="#39c6e8" opacity=".8"/>
+  <circle cx="44.5" cy="13" r="1.5" fill="#39c6e8" opacity=".8"/>
+</svg>

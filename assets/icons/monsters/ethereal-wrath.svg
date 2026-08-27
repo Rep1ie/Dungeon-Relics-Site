@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="ewBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff4ff" stop-opacity=".95"/><stop offset="70%" stop-color="#7fb6cf" stop-opacity=".7"/><stop offset="100%" stop-color="#3b6d86" stop-opacity=".25"/>
+    </linearGradient>
+    <radialGradient id="ewGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0" stop-color="#8fd7f2" stop-opacity=".4"/><stop offset="100%" stop-color="#8fd7f2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#100c09"/>
+  <circle cx="32" cy="32" r="28" fill="url(#ewGlow)"/>
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#b68f40" stroke-opacity=".45"/>
+  <path d="M32 11c9 0 15 7 15 17v22c0 2-2 3-3.4 1.4L40 47.6 36.6 52c-1.2 1.5-2.6 1.5-3.8 0L32 50l-1.4 2c-1.2 1.5-2.6 1.5-3.8 0L23.4 47.6 20 51.4C18.6 53 17 52 17 50V28c0-10 6-17 15-17z" fill="url(#ewBody)"/>
+  <ellipse cx="25.5" cy="29" rx="3.6" ry="5" fill="#0d2330"/>
+  <ellipse cx="38.5" cy="29" rx="3.6" ry="5" fill="#0d2330"/>
+  <circle cx="25.5" cy="28" r="1.4" fill="#9be8ff"/>
+  <circle cx="38.5" cy="28" r="1.4" fill="#9be8ff"/>
+  <ellipse cx="32" cy="40" rx="4" ry="5.5" fill="#0d2330" opacity=".8"/>
+  <path d="M50 18c2 2 2 4 0 6M14 18c-2 2-2 4 0 6" stroke="#9be8ff" stroke-opacity=".45" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="mmWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a5a2c"/><stop offset="100%" stop-color="#402410"/>
+    </linearGradient>
+    <linearGradient id="mmLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a06e37"/><stop offset="100%" stop-color="#5c3517"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#100c09"/>
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#b68f40" stroke-opacity=".45"/>
+  <path d="M12 27c2-9 8-14 20-14s18 5 20 14c-6-3-13-4.4-20-4.4S18 24 12 27z" fill="url(#mmLid)" transform="rotate(-12 32 22)"/>
+  <rect x="11" y="33" width="42" height="19" rx="4" fill="url(#mmWood)"/>
+  <rect x="11" y="33" width="42" height="4" fill="#c9a24a" opacity=".7"/>
+  <path d="M13 33h38l-3 5H16z" fill="#1a0d05"/>
+  <path d="M17 38l3.4 6 3.2-6zM26 38l3.4 6.6L33 38zM35.5 38l3.4 6.2L42.5 38z" fill="#f4ead2"/>
+  <path d="M19 33l-2.6-5.4L22 32zM31 32.4l-1.6-6.2 5 5.8zM43 32.8l1.2-5.8 3.4 5.4z" fill="#f4ead2"/>
+  <rect x="28" y="41" width="8" height="9" rx="2" fill="#c9a24a"/>
+  <circle cx="32" cy="45" r="1.8" fill="#2a1708"/>
+  <circle cx="22" cy="25" r="2.2" fill="#e8c964" opacity=".9"/>
+  <circle cx="42" cy="24" r="2.2" fill="#e8c964" opacity=".9"/>
+</svg>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="home.metaTitle">Dungeon Relics — Dungeon Encyclopedia</title>
+  <meta name="description" data-i18n-attr="content:home.metaDesc" content="The official Dungeon Relics encyclopedia: classes, bestiary, and loot.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/redesign.css">
+</head>
+<body data-page="home">
+  <header id="site-nav"></header>
+
+  <main>
+    <section class="hero">
+      <span class="torch" style="left:8%;top:120px"><span class="torch__flame"></span><span class="torch__stick"></span></span>
+      <span class="torch" style="right:8%;top:120px"><span class="torch__flame"></span><span class="torch__stick"></span></span>
+      <div class="wrap">
+        <div class="plaque reveal">
+          <span class="plaque__crest" data-icon="brand"></span>
+          <div class="kicker" data-i18n="home.kicker">Official encyclopedia</div>
+          <h1>Dungeon Relics</h1>
+          <span class="rule-orn"><i></i><span data-icon="rune"></span><i></i></span>
+          <p class="sub" data-i18n="home.heroSub">Descend into the depths of the dungeon: study hero classes, survive clashes with the creatures of darkness, and collect legendary loot.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="classes.html" data-i18n="home.ctaClasses">Hero classes</a>
+            <a class="btn btn--ghost" href="bestiary.html" data-i18n="home.ctaBestiary">Bestiary</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pad-sm">
+      <div class="wrap">
+        <div class="slab about-slab reveal">
+          <span class="crack" style="left:22%"></span>
+          <h2 data-i18n="home.aboutTitle">About the world</h2>
+          <p data-i18n="home.aboutText">Dungeon Relics is a cooperative ten-floor dungeon where every step deeper is a choice between greed and survival.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pad-sm">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow" data-i18n="home.sectionsEyebrow">Sections</span>
+          <h2 data-i18n="home.startTitle">Where to start</h2>
+          <p data-i18n="home.startSub">Three key sections of the encyclopedia — choose what to explore first.</p>
+        </div>
+        <div class="grid grid--3">
+          <a class="slab sec-card reveal" href="classes.html">
+            <span class="sec-card__icon" data-icon="classes"></span>
+            <h3 data-i18n="home.cardClassesTitle">Classes</h3>
+            <p data-i18n="home.cardClassesText">Six heroes with unique roles, active skills, and passives.</p>
+            <span class="sec-card__more" data-i18n="home.cardMore">Explore →</span>
+          </a>
+          <a class="slab sec-card reveal" href="bestiary.html">
+            <span class="sec-card__icon" data-icon="bestiary"></span>
+            <h3 data-i18n="home.cardBestiaryTitle">Bestiary</h3>
+            <p data-i18n="home.cardBestiaryText">From swamp slime to bosses — threats, abilities, and tactics.</p>
+            <span class="sec-card__more" data-i18n="home.cardMore">Explore →</span>
+          </a>
+          <a class="slab sec-card reveal" href="loot.html">
+            <span class="sec-card__icon" data-icon="loot"></span>
+            <h3 data-i18n="home.cardLootTitle">Items</h3>
+            <p data-i18n="home.cardLootText">Soul Shards, relics, weapons, armor, and consumables by rarity.</p>
+            <span class="sec-card__more" data-i18n="home.cardMore">Explore →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pad-sm">
+      <div class="wrap">
+        <div class="slab about-slab reveal">
+          <span class="crack" style="left:70%"></span>
+          <h2 data-i18n="home.pathTitle">The hero's path</h2>
+          <ul class="roadmap">
+            <li data-i18n="home.path1">Choose a class and study its skill branches.</li>
+            <li data-i18n="home.path2">Descend deeper: the lower the floor, the deadlier the creatures and the richer the loot.</li>
+            <li data-i18n="home.path3">Collect Soul Shards and upgrade your gear.</li>
+            <li data-i18n="home.path4">Defeat the floor boss and open the way deeper.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="content.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

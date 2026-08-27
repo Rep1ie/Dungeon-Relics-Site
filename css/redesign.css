@@ -1,0 +1,264 @@
+/* redesign.css — фэнтези-редизайн и единая система векторных иконок.
+   Подключается ПОСЛЕ components.css и только дополняет/перекрывает стили. */
+
+:root {
+  --ember: #d2582c;
+  --ember-lt: #ff9a4d;
+  --arcane: #7b52c9;
+  --frost: #7aa7d9;
+  --blood: #c0473f;
+  --gold-deep: #8a6a25;
+  --glass: rgba(233, 224, 210, .05);
+  --ring: rgba(182, 143, 64, .38);
+  --ring-hot: rgba(231, 199, 119, .75);
+  --shadow-lg: 0 26px 60px rgba(0, 0, 0, .6);
+  --shadow-md: 0 14px 34px rgba(0, 0, 0, .45);
+}
+
+/* ---------- ФОН ПОДЗЕМЕЛЬЯ ---------- */
+body {
+  background:
+    radial-gradient(1100px 620px at 50% -8%, rgba(182, 143, 64, .13), transparent 62%),
+    radial-gradient(760px 520px at 8% 22%, rgba(106, 4, 29, .16), transparent 68%),
+    radial-gradient(820px 560px at 96% 60%, rgba(90, 24, 154, .13), transparent 70%),
+    linear-gradient(180deg, #0b0908 0%, var(--stone-900) 45%, #0a0807 100%);
+  background-attachment: fixed;
+}
+
+/* Зернистая каменная текстура поверх фона. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .5;
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, .014) 0 2px, transparent 2px 5px),
+    repeating-linear-gradient(-25deg, rgba(0, 0, 0, .05) 0 3px, transparent 3px 7px);
+}
+body > * { position: relative; z-index: 1; }
+
+/* ---------- ТИПОГРАФИКА ---------- */
+h1 {
+  background: linear-gradient(180deg, #fff4d6 0%, var(--gold-lt) 45%, #9c7328 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 34px rgba(231, 199, 119, .18);
+}
+h2 { text-shadow: 0 2px 18px rgba(0, 0, 0, .55); }
+
+/* Декоративная линейка с руной. */
+.rule-orn { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 18px auto 22px; max-width: 420px; color: var(--gold); }
+.rule-orn i { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--ring), transparent); }
+.rule-orn svg { width: 16px; height: 16px; opacity: .9; }
+
+/* ---------- ИКОНКИ ---------- */
+.ic { width: 1.05em; height: 1.05em; display: inline-block; vertical-align: -.16em; flex: none; }
+.ic--xs { width: .95em; height: .95em; }
+.ic--sm { width: 1.25em; height: 1.25em; vertical-align: -.22em; }
+
+/* Медальон-контейнер для иконок сущностей. */
+.dr-ic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dr-ic.is-img,
+.dr-ic.is-svg {
+  background:
+    radial-gradient(circle at 50% 34%, rgba(182, 143, 64, .16), transparent 66%),
+    linear-gradient(180deg, #1b1510, #0e0b09);
+  border: 1px solid var(--ring);
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 8px 20px rgba(0, 0, 0, .45);
+}
+.dr-ic.is-svg { color: var(--gold-lt); }
+.dr-ic.is-svg svg { width: 62%; height: 62%; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .5)); }
+.dr-ic.is-emoji { font-style: normal; }
+
+.mon-card:hover .dr-ic,
+.loot-item:hover .dr-ic,
+.skill--link:hover .dr-ic,
+.sib:hover .dr-ic {
+  border-color: var(--ring-hot);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07), 0 10px 26px rgba(0, 0, 0, .5), 0 0 22px rgba(182, 143, 64, .22);
+}
+.dr-ic--lg { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 18px 40px rgba(0, 0, 0, .55); }
+
+/* Цветовые акценты статов. */
+.stat { display: inline-flex; align-items: center; gap: 7px; }
+.stat--hp .ic { color: var(--blood); }
+.stat--dmg .ic { color: var(--gold-lt); }
+.stat--mp .ic { color: var(--frost); }
+.skill__cd .ic { color: var(--ink-faint); }
+.skill__mp .ic { color: var(--frost); }
+.skill__cd, .skill__mp { display: inline-flex; align-items: center; gap: 6px; }
+.mon-card__more { display: inline-flex; align-items: center; gap: 8px; }
+.mon-card__more .ic { transition: transform .25s ease; }
+.mon-card:hover .mon-card__more .ic { transform: translateX(4px); }
+.loot-item__meta { display: flex; align-items: center; gap: 7px; }
+.loot-item__meta .ic { color: var(--gold); }
+.detail__sub { display: inline-flex; align-items: center; gap: 8px; }
+.detail__back { display: inline-flex; align-items: center; gap: 9px; }
+.detail__back .ic { transition: transform .25s ease; }
+.detail__back:hover .ic { transform: translateX(-4px); }
+.filter-btn { display: inline-flex; align-items: center; gap: 8px; }
+.filter-btn .ic { color: var(--gold); opacity: .9; }
+.filter-btn.is-active .ic { color: var(--gold-lt); }
+.frag-box h3 { display: flex; align-items: center; gap: 10px; }
+.frag-box h3 .ic { color: var(--arcane); filter: drop-shadow(0 0 8px rgba(123, 82, 201, .5)); }
+
+/* ---------- ШАПКА ---------- */
+.nav { backdrop-filter: blur(9px); background: linear-gradient(180deg, rgba(10, 8, 7, .94), rgba(10, 8, 7, .74)); border-bottom: 1px solid rgba(182, 143, 64, .22); }
+.nav__sigil { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; color: var(--gold-lt); }
+.nav__sigil svg { width: 100%; height: 100%; filter: drop-shadow(0 0 10px rgba(231, 199, 119, .35)); }
+.nav__brand { display: inline-flex; align-items: center; gap: 11px; }
+.nav__burger { display: inline-flex; align-items: center; justify-content: center; color: var(--gold-lt); }
+.nav__burger svg { width: 24px; height: 24px; }
+.nav__links a { position: relative; }
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-lt), transparent);
+  transform: scaleX(0);
+  transition: transform .3s ease;
+}
+.nav__links a:hover::after,
+.nav__links a.is-active::after { transform: scaleX(1); }
+
+/* ---------- ГЕРОЙ-БЛОК ---------- */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 140px;
+  background: linear-gradient(180deg, transparent, var(--stone-900));
+  pointer-events: none;
+}
+.plaque {
+  position: relative;
+  border: 1px solid var(--ring);
+  border-radius: 18px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(182, 143, 64, .1), transparent 60%),
+    linear-gradient(180deg, rgba(33, 26, 21, .92), rgba(13, 11, 10, .95));
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.plaque__crest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px; height: 62px;
+  margin-bottom: 14px;
+  color: var(--gold-lt);
+  border: 1px solid var(--ring);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 32%, rgba(182, 143, 64, .2), rgba(10, 8, 7, .9));
+  box-shadow: 0 0 30px rgba(182, 143, 64, .2), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+.plaque__crest svg { width: 56%; height: 56%; }
+
+/* Угловые засечки у плиты. */
+.plaque::before, .plaque::after {
+  content: "";
+  position: absolute;
+  width: 26px; height: 26px;
+  border: 1px solid var(--ring-hot);
+  opacity: .55;
+}
+.plaque::before { top: 10px; left: 10px; border-right: 0; border-bottom: 0; border-radius: 10px 0 0 0; }
+.plaque::after { bottom: 10px; right: 10px; border-left: 0; border-top: 0; border-radius: 0 0 10px 0; }
+
+/* ---------- КАРТОЧКИ ---------- */
+.slab, .mon-card, .class-card, .loot-item, .detail, .frag-box {
+  border-radius: 16px;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.slab, .mon-card, .class-card, .detail, .frag-box {
+  background:
+    linear-gradient(180deg, rgba(44, 35, 28, .55), rgba(13, 11, 10, .88)),
+    radial-gradient(140% 90% at 50% 0%, rgba(182, 143, 64, .07), transparent 60%);
+  border: 1px solid rgba(74, 61, 51, .9);
+  box-shadow: var(--shadow-md);
+}
+.mon-card:hover, .slab:hover, .loot-item:hover, .sec-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--ring);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(182, 143, 64, .12);
+}
+
+.sec-card { text-align: center; }
+.sec-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px; height: 74px;
+  margin-bottom: 18px;
+  color: var(--gold-lt);
+  border: 1px solid var(--ring);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 30%, rgba(182, 143, 64, .18), rgba(10, 8, 7, .92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 10px 26px rgba(0, 0, 0, .45);
+  font-size: 0;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.sec-card__icon svg { width: 40%; height: 40%; }
+.sec-card:hover .sec-card__icon {
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), 0 0 30px rgba(182, 143, 64, .28);
+}
+
+.class-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px; height: 58px;
+  color: var(--gold-lt);
+  border: 1px solid var(--ring);
+  border-radius: 14px;
+  background: radial-gradient(circle at 50% 30%, rgba(182, 143, 64, .16), rgba(10, 8, 7, .92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+  font-size: 0;
+}
+.class-card__icon svg { width: 55%; height: 55%; }
+
+/* Список «путь героя»: руна вместо символьного маркера. */
+.roadmap li::before {
+  content: "";
+  width: 15px; height: 15px;
+  background-color: var(--gold);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m12 2 2.6 6.4L21 11l-6.4 2.6L12 20l-2.6-6.4L3 11l6.4-2.6L12 2Z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m12 2 2.6 6.4L21 11l-6.4 2.6L12 20l-2.6-6.4L3 11l6.4-2.6L12 2Z'/></svg>") center / contain no-repeat;
+}
+
+/* ---------- КНОПКИ И ПЛАШКИ ---------- */
+.btn { border-radius: 10px; letter-spacing: .06em; }
+.btn--primary {
+  background: linear-gradient(180deg, #8d1230, var(--crimson));
+  border: 1px solid rgba(231, 199, 119, .35);
+  box-shadow: 0 10px 26px rgba(106, 4, 29, .45), inset 0 1px 0 rgba(255, 255, 255, .12);
+}
+.btn--primary:hover { box-shadow: 0 12px 34px rgba(154, 27, 58, .55), 0 0 24px rgba(231, 199, 119, .2); }
+.btn--ghost { border: 1px solid var(--ring); background: rgba(233, 224, 210, .03); }
+.btn--ghost:hover { border-color: var(--ring-hot); background: rgba(182, 143, 64, .1); }
+.pill { border-radius: 999px; letter-spacing: .1em; }
+
+/* ---------- МЕЛКИЕ ДОРАБОТКИ ---------- */
+.crumbs__sep { opacity: .5; }
+.footer { border-top: 1px solid rgba(182, 143, 64, .22); background: linear-gradient(180deg, rgba(10, 8, 7, .6), rgba(6, 5, 4, .95)); }
+.footer .nav__title { display: inline-flex; align-items: center; gap: 10px; }
+.footer .nav__sigil { width: 24px; height: 24px; }
+
+@media (max-width: 680px) {
+  .sec-card__icon { width: 62px; height: 62px; }
+  .plaque__crest { width: 52px; height: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slab, .mon-card, .class-card, .loot-item, .sec-card, .dr-ic, .ic { transition: none !important; }
+}

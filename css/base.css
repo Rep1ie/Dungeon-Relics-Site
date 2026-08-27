@@ -1,0 +1,79 @@
+/* base.css — токены, сброс, типографика, сетка */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap");
+
+:root {
+  --crimson: #6a041d;
+  --crimson-lt: #9a1b3a;
+  --gold: #b68f40;
+  --gold-lt: #e7c777;
+  --purple: #5a189a;
+  --green: #4d6a2f;
+  --silver: #c0c0c0;
+
+  --stone-900: #0d0b0a;
+  --stone-800: #171310;
+  --stone-700: #211a15;
+  --stone-600: #2c231c;
+  --stone-500: #3a302a;
+
+  --line: #4a3d33;
+  --ink: #e9e0d2;
+  --ink-dim: #b3a690;
+  --ink-faint: #8a7d6a;
+
+  --display: "Cinzel", Georgia, serif;
+  --body: "EB Garamond", Georgia, serif;
+
+  --radius: 12px;
+  --maxw: 1180px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--stone-900);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 700; line-height: 1.15; letter-spacing: .02em; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+h3 { font-size: 1.35rem; }
+h4 { font-size: .82rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gold); }
+a { color: var(--gold-lt); text-decoration: none; }
+p { color: var(--ink-dim); }
+
+.wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+section { position: relative; }
+
+.sec-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
+.sec-head h2 { color: var(--ink); }
+.sec-head .eyebrow { font-family: var(--display); text-transform: uppercase; letter-spacing: .32em; font-size: .72rem; color: var(--gold); display: block; margin-bottom: 14px; }
+.sec-head p { margin-top: 14px; }
+
+.grid { display: grid; gap: 22px; }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--classes { grid-template-columns: repeat(2, 1fr); }
+.grid--mons { grid-template-columns: repeat(3, 1fr); }
+
+.pad { padding: 96px 0; }
+.pad-sm { padding: 60px 0; }
+
+/* появление при скролле */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  .grid--3, .grid--mons { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  body { font-size: 17px; }
+  .grid--2, .grid--3, .grid--mons, .grid--classes { grid-template-columns: 1fr; }
+  .pad { padding: 64px 0; }
+}
